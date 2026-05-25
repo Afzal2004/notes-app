@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afzal Notes Pro</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background -->
+  <div class="bg bg1"></div>
+  <div class="bg bg2"></div>
+
+  <div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="logo">
+        <i class="fa-solid fa-note-sticky"></i>
+        <span>Notes</span>
+      </div>
+
+      <div class="menu">
+        <button class="active">
+          <i class="fa-solid fa-house"></i>
+          Notes
+        </button>
+
+        <button>
+          <i class="fa-solid fa-star"></i>
+          Important
+        </button>
+
+        <button>
+          <i class="fa-solid fa-trash"></i>
+          Deleted
+        </button>
+      </div>
+
+      <div class="theme-switch">
+        <button id="themeBtn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
+
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <!-- Header -->
+      <div class="header">
+
+        <div>
+          <h1>Welcome Back 👋</h1>
+          <p>Manage your notes beautifully</p>
+        </div>
+
+        <div class="stats">
+          <span id="noteCount">0 Notes</span>
+        </div>
+
+      </div>
+
+      <!-- Search -->
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Search notes...">
+      </div>
+
+      <!-- Add Note -->
+      <div class="add-note">
+
+        <textarea
+          id="noteInput"
+          placeholder="Write something amazing..."
+        ></textarea>
+
+        <button onclick="addNote()">
+          <i class="fa-solid fa-plus"></i>
+          Add Note
+        </button>
+
+      </div>
+
+      <!-- Notes -->
+      <div id="notes" class="notes-grid"></div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="empty-state">
+        <i class="fa-regular fa-note-sticky"></i>
+        <h2>No Notes Yet</h2>
+        <p>Create your first beautiful note 🚀</p>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Toast -->
+  <div id="toast">Note Added Successfully ✅</div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
