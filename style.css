@@ -370,16 +370,27 @@ body {
     justify-content: center;
   }
 
-  #toast {
-    left: 15px;
-    right: 15px;
-    bottom: 15px;
-    text-align: center;
-  }
+#toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #10b981;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: 0 10px 20px rgba(0,0,0,.15);
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+  z-index: 9999;
+}
 
-  #toast.show {
-    right: 15px;
-  }
+#toast.show {
+  opacity: 1;
+  visibility: visible;
+}
 
 }
 
