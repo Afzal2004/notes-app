@@ -53,9 +53,9 @@ body {
 /* App Container */
 .app {
   display: flex;
-  width: 90vw;
-  max-width: 1200px;
-  height: 85vh;
+  width: 95%;
+  max-width: 1400px;
+  min-height: 85vh;
   background: var(--panel-bg);
   backdrop-filter: blur(16px);
   border: 1px solid var(--border);
@@ -247,3 +247,172 @@ body {
   transition: right 0.4s ease;
 }
 #toast.show { right: 20px; }
+/* ===================================
+   RESPONSIVE DESIGN
+=================================== */
+
+/* Laptop */
+@media (max-width: 1200px) {
+
+  .app {
+    width: 96%;
+  }
+
+  .sidebar {
+    width: 230px;
+  }
+
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .sidebar {
+    width: 200px;
+    padding: 1.5rem;
+  }
+
+  .main {
+    padding: 1.5rem;
+  }
+
+  .notes-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  body {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .app {
+    flex-direction: column;
+    width: 100%;
+    min-height: calc(100vh - 24px);
+    border-radius: 20px;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem;
+  }
+
+  .logo {
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+    gap: 8px;
+  }
+
+  .menu button {
+    width: auto;
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .theme-switch {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .theme-switch button {
+    width: auto;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header h1 {
+    font-size: 1.8rem;
+  }
+
+  .stats {
+    align-self: flex-start;
+  }
+
+  .notes-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .note-card {
+    height: auto;
+    min-height: 160px;
+  }
+
+  .add-note textarea {
+    min-height: 120px;
+  }
+
+  .add-note button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #toast {
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    text-align: center;
+  }
+
+  #toast.show {
+    right: 15px;
+  }
+
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .menu button {
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+
+  .search-box {
+    padding: 10px 12px;
+  }
+
+  .add-note {
+    padding: 0.8rem;
+  }
+
+  .note-card {
+    padding: 1rem;
+  }
+
+}
